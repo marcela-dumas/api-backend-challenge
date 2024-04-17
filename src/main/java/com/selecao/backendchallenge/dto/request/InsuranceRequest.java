@@ -6,11 +6,11 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public record InsuranceRequest(
-        @NotBlank(message = "O campo name é obrigatório")
+        @NotBlank(message = "O campo nome é obrigatório")
         @Size(min = 1, max = 40, message = "O campo name deve ter no mínimo {min} no máximo {max} caracteres")
         @JsonProperty("nome") String name,
 
-        @NotBlank(message = "O campo category é obrigatório")
+        @NotBlank(message = "O campo categoria é obrigatório")
         @Size(min = 1, max = 20, message = "O campo ca" +
                 "tegory deve ter no mínimo {min} no máximo {max} caracteres")
         @JsonProperty("categoria") String category,
